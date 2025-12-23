@@ -1,0 +1,108 @@
+/* Job card base */
+/* Base card */
+.job-card {
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+  color: #111;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+
+  opacity: 1;
+  transform: translateY(0);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* Initial + new job animation */
+.job-card.new {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Remove animation */
+.job-card.removing {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+/* ONLY motion + opacity */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.job-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.job-card p {
+  margin: 0.25rem 0;
+  transition: color 0.3s;
+}
+
+.status {
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.status.applied { color: #1e88e5; }
+.status.oa { color: #fb8c00; }
+.status.interview { color: #2e7d32; }
+
+.job-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.job-actions button {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+
+  background-color: #f5f5f5;
+  color: #111;
+
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.job-actions button:hover {
+  background-color: #e0e0e0;
+  border-color: #888;
+  transform: translateY(-2px);
+}
+.job-actions button:first-child {
+  border-color: #e57373;
+  color: #c62828;
+}
+
+.job-actions button:first-child:hover {
+  background-color: #fdecea;
+}
+
+
+/* Dark mode overrides */
+.dark .job-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark .job-actions button {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+.dark .job-actions button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}

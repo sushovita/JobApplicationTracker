@@ -1,0 +1,191 @@
+/* -------- Global -------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #111;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* -------- Header -------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #1e88e5;
+  transition: color 0.3s;
+}
+
+.dark .header h1 {
+  color: #61dafb;
+}
+
+.header button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #111;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.header button:hover {
+  transform: translateY(-2px);
+}
+
+.dark .header button {
+  background-color: #f1f1f1;
+  color: #111;
+}
+
+/* -------- Filters -------- */
+.filters {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #888;
+  cursor: pointer;
+  background-color: #fff;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover {
+  background-color: #ddd;
+  transform: translateY(-2px);
+}
+
+.filters input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #888;
+  outline: none;
+  min-width: 150px;
+  transition: all 0.3s ease;
+}
+
+.filters input:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 5px #1e88e5;
+}
+
+/* -------- Counts -------- */
+.counts {
+  margin: 0.5rem 0 1rem 0;
+  font-weight: bold;
+  color: #444;
+}
+
+.dark .counts {
+  color: #ccc;
+}
+
+/* -------- Empty / Loading Text -------- */
+p {
+  font-style: italic;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.dark p {
+  color: #aaa;
+}
+
+/* -------- Add Job Form -------- */
+.add-job-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.add-job-form input,
+.add-job-form select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #888;
+  outline: none;
+  background-color: #fff;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.add-job-form input:focus,
+.add-job-form select:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 5px #1e88e5;
+}
+
+.add-job-form button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #1e88e5;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-job-form button:hover {
+  background-color: #1565c0;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* ===== DARK MODE FIX ===== */
+/* ========================= */
+
+.dark .filters button {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+.dark .filters button:hover {
+  background-color: #3a3a3a;
+}
+
+.dark .filters input,
+.dark .add-job-form input,
+.dark .add-job-form select {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+.dark .filters input::placeholder,
+.dark .add-job-form input::placeholder {
+  color: #aaa;
+}
+
+.dark .add-job-form button {
+  background-color: #1e88e5;
+  color: #fff;
+}
