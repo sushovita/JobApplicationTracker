@@ -2,7 +2,7 @@
 
 A modern **Job Application Tracker** built with **React** to help users track job applications across different stages with a clean UI, smooth animations, and dark mode support.
 
-🔗 **Live Demo:** (add your deployed link here)  
+🔗 **Live Demo:** 
 📂 **GitHub Repo:** This repository
 
 ---
